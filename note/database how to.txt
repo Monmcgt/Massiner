@@ -1,0 +1,60 @@
+        new DatabaseManager("localhost", "3306", "test1", "root", "").connect();
+//        DatabaseManager.instance.query("use test1");
+        DatabaseManager.instance.execute("insert into `test1`.`tb1` (`username`, `password`) values ('Bobby', 'BOB_LIKE123456')");
+        DatabaseManager.ExecuteQueryClass executeQueryClass = DatabaseManager.instance.createExecuteQueryClass("select * from `test1`.`tb1`");
+        ResultSet resultSet = executeQueryClass.resultSet;
+        while (resultSet.next()) {
+            System.out.println(resultSet.getString("username") + " -> " + resultSet.getString("password"));
+        }
+
+
+
+
+
+
+CREATE TABLE `online` ( `no` INT NOT NULL AUTO_INCREMENT , `second` VARCHAR(5) NOT NULL , `minute` VARCHAR(5) NOT NULL , `hour` VARCHAR(5) NOT NULL , `day` VARCHAR(5) NOT NULL , `month` VARCHAR(5) NOT NULL , `year` VARCHAR(5) NOT NULL , `ip` VARCHAR(5) NOT NULL , `port` VARCHAR(5) NOT NULL , PRIMARY KEY (`no`));
+
+CREATE TABLE `offline` ( `no` INT NOT NULL AUTO_INCREMENT , `second` VARCHAR(5) NOT NULL , `minute` VARCHAR(5) NOT NULL , `hour` VARCHAR(5) NOT NULL , `day` VARCHAR(5) NOT NULL , `month` VARCHAR(5) NOT NULL , `year` VARCHAR(5) NOT NULL , `ip` VARCHAR(5) NOT NULL , `port` VARCHAR(5) NOT NULL , PRIMARY KEY (`no`));
+
+CREATE TABLE `mixed` ( `no` INT NOT NULL AUTO_INCREMENT , `second` VARCHAR(5) NOT NULL , `minute` VARCHAR(5) NOT NULL , `hour` VARCHAR(5) NOT NULL , `day` VARCHAR(5) NOT NULL , `month` VARCHAR(5) NOT NULL , `year` VARCHAR(5) NOT NULL , `ip` VARCHAR(5) NOT NULL , `port` VARCHAR(5) NOT NULL , `working` VARCHAR(1) NOT NULL , `version` VARCHAR(75) NULL , `motd` VARCHAR(75) NULL , `players` TEXT NULL , `exception` VARCHAR(50) NULL , PRIMARY KEY (`no`));
+
+UPDATE `last_server` SET `address` = 'address' WHERE `id` = 1;
+String statement = "UPDATE `last_server` SET `address` = '" + result.getAddress() + "` WHERE `id` = 1;";
+
+--------------------------------------------------
+standalone
+
+second
+minute
+hour
+day
+month
+year
+
+ip
+port
+------------------------------------------------------------
+mixed
+
+second
+minute
+hour
+day
+month
+year
+
+ip
+port
+
+} 9
+
+working
+version
+motd
+players
+exception
+
+} 5
+
+} 14
+---------------------------------------------------------------

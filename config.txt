@@ -1,0 +1,15 @@
+# This is the config file for the Massiner Project.
+
+threads=1
+timeout=50
+database_host=localhost
+database_port=3306
+database_username=root
+database_password=
+database_name=test1
+table_name_online_servers=online_servers
+table_name_mixed_servers=mixed_servers
+table_name_last_update=last_server
+mode_update_last_server=2
+mode_update_last_server_server_per_update=1
+address_iterator_port_range=1-3,4,9,15-20,35,42-44
