@@ -1,0 +1,17 @@
+        Results results = new Results("111.123.45.67:55555", "111.123.45.67", 55555, "1.7-1.8", "blabla", "motd is bad", new Players(Lists.newArrayList(new Player("MC_MzCGT", ""), new Player("Pooh555", ""))));
+        ResultManager.INSTANCE.receiveResult(results);
+
+        Thread.sleep(2000);
+
+        results = new Results("55.55.55.55:123", "55.55.55.55", 123, "lol go aaway no version leak", "blabla", "motd is good", new Players(Lists.newArrayList(new Player("Angpao", ""), new Player("Kimberry", ""))));
+        ResultManager.INSTANCE.receiveResult(results);
+
+        Thread.sleep(2000);
+
+        results = new Results("23.68.143.154:25565", "23.68.143.154", 25565, "PaperSpigot 1.18.2", "blabla", "A Minecraft Server", new Players(Lists.newArrayList(new Player("xZAZAxD123_", ""))));
+        ResultManager.INSTANCE.receiveResult(results);
+
+        Thread.sleep(2000);
+
+        results = new Results("43.228.54.68:25565", "43.228.54.68", 1, "XeSpigot 1.8", "blabla", "---", null);
+        ResultManager.INSTANCE.receiveResult(results);

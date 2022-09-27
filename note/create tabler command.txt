@@ -1,0 +1,7 @@
+CREATE TABLE `online_servers` ( `no` INT NOT NULL AUTO_INCREMENT , `second` VARCHAR(5) NOT NULL , `minute` VARCHAR(5) NOT NULL , `hour` VARCHAR(5) NOT NULL , `day` VARCHAR(5) NOT NULL , `month` VARCHAR(5) NOT NULL , `year` VARCHAR(5) NOT NULL , `ip` VARCHAR(15) NOT NULL , `port` VARCHAR(5) NOT NULL , PRIMARY KEY (`no`));
+
+CREATE TABLE `offline_servers` ( `no` INT NOT NULL AUTO_INCREMENT , `second` VARCHAR(5) NOT NULL , `minute` VARCHAR(5) NOT NULL , `hour` VARCHAR(5) NOT NULL , `day` VARCHAR(5) NOT NULL , `month` VARCHAR(5) NOT NULL , `year` VARCHAR(5) NOT NULL , `ip` VARCHAR(15) NOT NULL , `port` VARCHAR(5) NOT NULL , PRIMARY KEY (`no`));
+
+CREATE TABLE `mixed_servers` ( `no` INT NOT NULL AUTO_INCREMENT , `second` VARCHAR(5) NOT NULL , `minute` VARCHAR(5) NOT NULL , `hour` VARCHAR(5) NOT NULL , `day` VARCHAR(5) NOT NULL , `month` VARCHAR(5) NOT NULL , `year` VARCHAR(5) NOT NULL , `ip` VARCHAR(15) NOT NULL , `port` VARCHAR(5) NOT NULL , `working` VARCHAR(1) NOT NULL , `version` VARCHAR(75) NULL , `motd` VARCHAR(75) NULL , `players` TEXT NULL , `exception` VARCHAR(50) NULL , PRIMARY KEY (`no`));
+
+CREATE TABLE `last_server` ( `id` INT NOT NULL , `address` VARCHAR(25) NOT NULL );
